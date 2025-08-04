@@ -1,4 +1,4 @@
-return { -- Useful plugin to show you pending keybinds.
+return {              -- Useful plugin to show you pending keybinds.
   "folke/which-key.nvim",
   event = "VimEnter", -- Sets the loading event to 'VimEnter'
   opts = {
@@ -49,6 +49,8 @@ return { -- Useful plugin to show you pending keybinds.
       { "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
       { "<leader>d", group = "[D]elete" },
       { "<leader>r", group = "[R]ename" },
+      { "<leader>c", group = "[C]ode" },
+      { "<leader>x", group = "Trouble" },
     },
   },
 }

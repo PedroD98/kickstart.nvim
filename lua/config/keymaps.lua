@@ -24,7 +24,7 @@ keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window"
 
 -- Buffer navigation
 keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Go to next buffer" })
-keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "o to previous buffer" })
+keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Go to previous buffer" })
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
@@ -44,7 +44,14 @@ keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
 
 -- Delete group keymaps
 keymap.set("n", "<leader>db", "<cmd>bp|bd#<CR>", { desc = "[D]elete current buffer" })
-keymap.set("n", "<leader>dB", "<cmd>%bd|e#<CR>", { desc = "[D]elete all other buffers" })
+keymap.set("n", "<leader>dB", "<cmd>%bd|e#|Neotree reveal<CR>", { desc = "[D]elete all other buffers" })
+
+-- Code group keymaps
+keymap.set("n", "<leader>cm", "<cmd>Mason<CR>", { desc = "Mason" })
+keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code actions" })
+
+-- Lazy
+keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazy" })
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
