@@ -11,7 +11,8 @@ return {
   },
   lazy = false,
   keys = {
-    { '<leader>e', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>e', ':Neotree reveal<CR>', desc = 'Neotree reveal', silent = true },
+    { '<leader>E', ':Neotree close<CR>',  desc = 'Neotree close',  silent = true },
   },
   opts = {
     filesystem = {
@@ -24,6 +25,10 @@ return {
       },
       filtered_items = {
         visible = true,
+      },
+      follow_current_file = {
+        enabled = true,
+        update_root = true,
       },
     },
   },
