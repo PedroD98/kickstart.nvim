@@ -26,9 +26,13 @@ keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window"
 keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Go to next buffer" })
 keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Go to previous buffer" })
 
--- Quickfix navigation
-keymap.set("n", "<M-j>", "<cmd>cnext<CR>", { desc = "Go to next Quickfix" })
-keymap.set("n", "<M-k>", "<cmd>cprev<CR>", { desc = "Go to previous Quickfix" })
+-- Duplicate line
+keymap.set("n", "<M-Up>", "yyP", { desc = "Copy line up" })
+keymap.set("n", "<M-Down>", "yyp", { desc = "Copy line down" })
+
+-- Line movement
+keymap.set("n", "<M-k>", "<cmd>m -2<CR>", { desc = "Move line up" })
+keymap.set("n", "<M-j>", "<cmd>m +1<CR>", { desc = "Move line down" })
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
